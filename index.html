@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Najot Ta'lim</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        
+    }
+
+    .block {
+        margin-bottom: 20px;
+        padding: 15px;
+        padding-left: 45px;
+        background-color: #f8f9fa;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 10px;  
+    }
+
+    .button {
+        display: inline-block;
+        padding: 8px 16px;
+        margin-right: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+    }
+
+    .button.primary {
+        background-color: #007bff;
+        transition: all 2s;
+    }
+
+    .button.primary:hover{
+    background-color:#ff7700;
+    }
+
+    .button.secondary {
+        background-color: #6c757d;
+        transition: all 2s;
+    }
+
+    .button.secondary:hover{
+    background-color:#f00c13;
+    }
+
+    .button.tertiary {
+        background-color: #28a745;
+        transition: all 2s;
+    }
+
+    .button.tertiary:hover{
+        background-color: #fcf402;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Najot Ta'lim-Kelajak kasblarini biz bilan o'rganing!</h1>
+    <div class="button-container">
+        <button class="button primary" onclick="changeStyles('primary')">Primary</button>
+        <button class="button secondary" onclick="changeStyles('secondary')">Secondary</button>
+        <button class="button tertiary" onclick="changeStyles('tertiary')">Tertiary</button>
+    </div>
+</header>
+
+<div class="container">
+    <div class="block" id="block1">
+        <h2>Najot Ta'lim rasmlarini ko'rib roxatlaning</h2>
+        <img src="./images/images (1).jpg" width="704" height="400" alt="Rasm">
+        <img src="./images/62be93d72d32863fe1b3c215_Najot-logo-5.jpg " width="704" height="400" alt="rasm">
+        <img src="./images/registration (1).webp" alt="rasm">
+    </div>
+    
+    <div class="block" id="block2">
+        <h2>Najot ta'lim haqida fikiringizni kiriting kiriting</h2>
+        <input type="text" placeholder="Bu yerga fikiringizni yozing yozing...">
+
+    </div>
+    
+    <div class="block" id="block3">
+        <h2>Najot ta'lim sarlavhasi</h2>
+        <div class="card">
+            <h3>Najot ta'lim sarlavhasi haqida fikiringizni kiriting</h3>
+            <input type="text" placeholder="Sarlavha haqida fikiringiz yozing...">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function changeStyles(style) {
+        var blocks = document.querySelectorAll('.block');
+
+        blocks.forEach(function(block) {
+            block.style.backgroundColor = getComputedStyle(document.body).getPropertyValue('--' + style);
+        });
+    }
+</script>
+
+</body>
+</html>
