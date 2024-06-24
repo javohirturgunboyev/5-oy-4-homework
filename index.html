@@ -41,6 +41,7 @@
     .button-container {
         text-align: center;
         margin-top: 10px;  
+        
     }
 
     .button {
@@ -87,18 +88,18 @@
 <header>
     <h1>Najot Ta'lim-Kelajak kasblarini biz bilan o'rganing!</h1>
     <div class="button-container">
-        <button class="button primary" onclick="changeStyles('primary')">Primary</button>
-        <button class="button secondary" onclick="changeStyles('secondary')">Secondary</button>
-        <button class="button tertiary" onclick="changeStyles('tertiary')">Tertiary</button>
+        <button class="button_primary" onclick="changeStyles('primary')">Primary</button>
+        <button class="button_secondary" onclick="changeStyles('secondary')">Secondary</button>
+        <button class="button_tertiary" onclick="changeStyles('tertiary')">Tertiary</button>
     </div>
 </header>
 
 <div class="container">
     <div class="block" id="block1">
         <h2>Najot Ta'lim rasmlarini ko'rib roxatlaning</h2>
-        <img src="./images/images (1).jpg" width="704" height="400" alt="Rasm">
-        <img src="./images/62be93d72d32863fe1b3c215_Najot-logo-5.jpg " width="704" height="400" alt="rasm">
-        <img src="./images/registration (1).webp" alt="rasm">
+        <img id="img1" src="./images/images (1).jpg" width="704" height="400" alt="Rasm">
+        <img id="img2" src="./images/62be93d72d32863fe1b3c215_Najot-logo-5.jpg " width="704" height="400" alt="rasm">
+        <img id="img3" src="./images/registration (1).webp" alt="rasm">
     </div>
     
     <div class="block" id="block2">
@@ -117,15 +118,7 @@
     </div>
 </div>
 
-<script>
-    function changeStyles(style) {
-        var blocks = document.querySelectorAll('.block');
-
-        blocks.forEach(function(block) {
-            block.style.backgroundColor = getComputedStyle(document.body).getPropertyValue('--' + style);
-        });
-    }
-</script>
+<script src="./index.js"></script>
 
 </body>
 </html>
